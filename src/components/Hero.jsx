@@ -18,9 +18,7 @@ export default function Hero() {
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 px-4 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
         {/* Text column */}
         <div>
-          <div className="eyebrow mb-5 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5">
-            portfolio.init()
-          </div>
+          
 
           <h1 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
             {siteConfig.name}

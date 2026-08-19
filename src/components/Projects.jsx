@@ -8,16 +8,12 @@ export default function Projects() {
       <div className="pointer-events-none absolute -top-20 right-0 h-72 w-72 rounded-full bg-[var(--color-purple)]/10 blur-[100px]" />
       <Reveal className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <span className="eyebrow">projects</span>
+          
           <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
             Things I&apos;ve Built
           </h2>
         </div>
-        <p className="max-w-sm text-sm text-[var(--color-text-dim)]">
-          New projects can be added anytime by editing{" "}
-          <code className="font-mono text-[var(--color-blue-soft)]">src/data/projects.js</code> —
-          no redesign required.
-        </p>
+       
       </Reveal>
 
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">

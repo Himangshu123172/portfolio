@@ -16,7 +16,7 @@ export default function About() {
     <section id="about" className="relative mx-auto max-w-7xl scroll-mt-28 px-4 py-24 sm:px-6 lg:px-8">
       <div className="pointer-events-none absolute -top-10 left-0 h-72 w-72 rounded-full bg-[var(--color-blue)]/10 blur-[100px]" />
       <Reveal>
-        <span className="eyebrow">about</span>
+        
         <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
           Who I Am
         </h2>

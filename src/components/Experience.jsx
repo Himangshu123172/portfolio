@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-7xl scroll-mt-28 px-4 py-24 sm:px-6 lg:px-8">
       <Reveal>
-        <span className="eyebrow">experience</span>
+        
         <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
           Internships &amp; Workshops
         </h2>
