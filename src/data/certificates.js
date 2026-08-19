@@ -15,7 +15,7 @@ export const internshipCertificates = [
     date: "July 20, 2024",
     // [Add file] — upload the PDF to public/assets/certificates/ and set the path here,
     // e.g. file: "/assets/certificates/cyber-security-internship.pdf"
-    file: "public/assets/certificates/cyber-security-internship.pdf",
+    file: "/assets/certificates/cyber-security-internship.pdf",
   },
   {
     id: "cert-ml-intern",

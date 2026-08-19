@@ -47,7 +47,7 @@ const projects = [
     description:
       "A full-stack web application for managing rental properties in real time, covering frontend/backend integration and database management.",
     technologies: ["Full Stack Web Development"],
-    image: "public/assets/projects/real-time-rental-project.jpeg",
+    image: "/assets/projects/real-time-rental-project.jpeg",
     github:
       "https://github.com/Himangshu123172/REAL-TIME-PROPERTY-RENTAL-MAINTENANCE-AMENITY-MANAGEMENT-PLATFORM.git",
     liveDemo: "https://rentalhub-management.vercel.app",
