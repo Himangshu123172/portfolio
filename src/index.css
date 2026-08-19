@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-bg: #0a0a0f;
+  --color-bg-soft: #0e0e16;
+  --color-surface: #12121c;
+  --color-blue: #3b82f6;
+  --color-purple: #8b5cf6;
+  --color-blue-soft: #60a5fa;
+  --color-text: #e6e6ef;
+  --color-text-dim: #9494a8;
+  --color-text-faint: #5c5c70;
+  --color-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.35);
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-blue), var(--color-purple));
+  border-radius: 999px;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+}
+
+.glass-hover {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.glass-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow: 0 20px 60px -20px rgba(59, 130, 246, 0.25);
+}
+
+/* Gradient text */
+.grad-text {
+  background: linear-gradient(90deg, var(--color-blue-soft), var(--color-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gradient border ring for profile pic */
+.ring-gradient {
+  background: conic-gradient(from 180deg, #3b82f6, #8b5cf6, #3b82f6);
+}
+
+.input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.input::placeholder {
+  color: var(--color-text-faint);
+}
+.input:focus {
+  outline: none;
+  border-color: rgba(96, 165, 250, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-blue-soft);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Fade-up reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section eyebrow label - terminal style, matches dev persona */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-blue-soft);
+}
+.eyebrow::before {
+  content: "// ";
+  color: var(--color-purple);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.pulse-dot {
+  animation: pulse-glow 2.2s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
